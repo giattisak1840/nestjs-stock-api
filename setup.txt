@@ -1,0 +1,43 @@
+npm i class-transformer class-validator --save
+
+npm i change-case --save
+
+npm i @nestjs/typeorm typeorm pg --save
+Setup typeorm config 
+import { TypeOrmModuleOptions } from '@nestjs/typeorm';
+export const typeOrmConfig: TypeOrmModuleOptions = {
+    type: 'postgres',
+    host: 'localhost',
+    port: 5432,
+    username: 'postgres',
+    password: 'Dream1840',
+    database: 'nestjs-stock',
+    entities: [__dirname + '/../**/*.entity.{js,ts}'],
+    synchronize: true
+}
+
+npm i multer fs-extra --save
+import { diskStorage } from 'multer';
+import * as fsExtra from 'fs-extra';
+import { extname } from 'path';
+
+
+npm i bcrypt --save
+npm i @nestjs/jwt @nestjs/passport passport passport-jwt --save
+
+
+configuration
+npm i -g win-node-env 
+npm i config
+
+#PreDeployment
+1. Change bcrypt to bcryptjs "npm uninstall bcrypt" --> "npm install bcryptjs"
+2. Edit package.json 
+
+"devDependencies": {
+    "@nestjs/cli": "^7.0.0",
+    "@types/express": "^4.17.3",
+    "@types/node": "^13.9.1",
+    "typescript": "^3.7.4",
+    "ts-node": "^8.6.2",
+}
